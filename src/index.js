@@ -1,10 +1,12 @@
-import "./wdyr";
+// import "./wdyr";
 import React from "react";
 import ReactDOM from "react-dom/client";
 
 import "./styles/global.css";
 
 import App from "./app";
+
+// @ts-ignore
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 

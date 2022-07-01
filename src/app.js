@@ -1,10 +1,13 @@
-import React from "react";
-import useTilg from "tilg";
+import React, { useEffect } from "react";
+
+import TonWeb from "tonweb";
 
 const App = () => {
+	const tonweb = new TonWeb();
+	console.log(tonweb);
 	return (
 		<>
-			<Header />
+			<div>helxasxslo world</div>
 		</>
 	);
 };
