@@ -1,13 +1,19 @@
-import React, { useEffect } from "react";
+import React from "react";
 
-import TonWeb from "tonweb";
+import AppRoutes from "./components/app-routes";
+import Connection from "./components/connection";
+import Header from "./components/header";
 
 const App = () => {
-	const tonweb = new TonWeb();
-	console.log(tonweb);
 	return (
 		<>
-			<div>helxasxslo world</div>
+			<div className=" h-screen">
+				<div>
+					<Connection />
+					<Header />
+					<AppRoutes />
+				</div>
+			</div>
 		</>
 	);
 };

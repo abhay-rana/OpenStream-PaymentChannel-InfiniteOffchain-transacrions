@@ -10,7 +10,7 @@ module.exports = {
 			colors: {
 				transparent: "transparent",
 				current: "currentColor",
-				primary: { DEFAULT: "#01b193", dark: "#0b7670", light: "#e1fdf8" },
+				primary: { DEFAULT: "#01b193", dark: "#229ED9", light: "#e1fdf8" },
 				secondary: { DEFAULT: "#d9dd28" },
 				warning: { DEFAULT: "#fb8903", light: "#fff0ca" },
 				danger: { DEFAULT: "#ff0000", light: " #ffebeb" },
@@ -23,7 +23,7 @@ module.exports = {
 					lightest: "#F4F4F4",
 				},
 				custom: {
-					background: "var(--background)",
+					background: "#F2F7F9",
 					foreground: "var(--foreground)",
 				},
 			},

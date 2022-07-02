@@ -1,14 +1,15 @@
 import React from "react";
-import useTilg from "tilg";
+import Button from "./Button";
 
 const Header = () => {
-	useTilg();
 	return (
 		<>
-			<div className="bg-red-300 h-[50px]">
-				<span>Infinite scroll and lazy loading via intersection observable</span>
+			<div className="flex justify-between p-[16px] h-[60px] sticky top-0 bg-white">
+				<span className="font-bold text-lg">OpenStream</span>
+				<Button primary warning>
+					Login
+				</Button>
 			</div>
-			{console.log("insde the header.js")}
 		</>
 	);
 };

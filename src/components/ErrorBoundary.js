@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import { Link } from "wouter";
+import { Component } from "react";
 
 class ErrorBoundary extends Component {
 	constructor(props) {
@@ -17,10 +18,20 @@ class ErrorBoundary extends Component {
 	}
 
 	render() {
-		console.log("error boundary");
 		if (this.state.hasError) {
 			// You can render any custom fallback UI
-			return <div>there is a error</div>;
+			return (
+				<div className="h-full flex flex-col items-center justify-center">
+					<div className="p-5 text-center">
+						<img src="https://static.oxinis.com/healthmug/image/healthmug/error.png" className="w-44 h-44 inline-block" />
+						<h4 className="mt-md text-md font-medium">Oops...</h4>
+						<p className="text-gray-medium">Sorry, Something went wrong. Try again</p>
+						<Link href="/">
+							<button>CONTINUE SHOPPING</button>
+						</Link>
+					</div>
+				</div>
+			);
 		}
 
 		return this.props.children;
