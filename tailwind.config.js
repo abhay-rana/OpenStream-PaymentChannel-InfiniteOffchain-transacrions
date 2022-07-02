@@ -3,8 +3,7 @@ module.exports = {
 	darkMode: "class",
 	theme: {
 		fontFamily: {
-			custom: ["Roboto", "sans-sarif"],
-			heading: ["Oswald", "sans-serif"],
+			custom: ["Poppins", "sans-serif"],
 		},
 		extend: {
 			colors: {
@@ -16,11 +15,11 @@ module.exports = {
 				danger: { DEFAULT: "#ff0000", light: " #ffebeb" },
 				success: { DEFAULT: "#5cb85c", light: "#ecffef" },
 				gray: {
-					dark: "#464646",
+					dark: "#2D4A58",
 					DEFAULT: "#3c4858",
 					medium: "#818181",
 					light: "#b7b7b7",
-					lightest: "#F4F4F4",
+					lightest: " #F3F3F3",
 				},
 				custom: {
 					background: "#F2F7F9",

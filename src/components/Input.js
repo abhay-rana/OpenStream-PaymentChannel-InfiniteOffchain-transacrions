@@ -59,7 +59,7 @@ const Input = memo((props) => {
 
 	return (
 		<div className="group">
-			{label ? <label className={`text-xs block font-normal mb-1 ${showError ? "text-danger" : "text-gray-500"} group-hover:text-primary`}>{label}</label> : null}
+			{label ? <label className={`text-black block font mb-1 ${showError ? "text-danger" : "text-black"} group-hover:text-primary`}>{label}</label> : null}
 			{children}
 			<input {...default_props} className={extraClass} ref={controlRef} />
 			{error || note ? (
