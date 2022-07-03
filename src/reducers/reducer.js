@@ -1,5 +1,5 @@
 export const initialState = {
-	user: "",
+	address: "",
 	counter: 0,
 	name: "",
 };
@@ -24,6 +24,10 @@ export function reducer(state = initialState, action) {
 	if (action.type === "SETNAME") {
 		newState = { ...newState, name: action.data };
 		console.log(newState);
+		return newState;
+	}
+	if (action.type === "SET_WALLET_ADDRESS") {
+		newState.address = action.data;
 		return newState;
 	}
 	return state;
