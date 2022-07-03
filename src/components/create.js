@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
+import { toast } from "react-toastify";
 import { useLocation } from "wouter";
 
 import Button from "./Button";
@@ -7,8 +8,17 @@ import Input from "./Input";
 const Create = () => {
 	const [tonAmount, setTonAmount] = useState("");
 	const [address, setAddress] = useState("");
-	const [schedule, setSchedule] = useState("");
+	const [schedule, setSchedule] = useState("minutely");
 	const [location, setLocation] = useLocation();
+
+	const setAmount = (value) => {
+		if (!isNaN(value)) setTonAmount(value);
+		else toast.error("Enter Number only");
+	};
+
+	const parseNumber = () => {
+		if (!!tonAmount) setTonAmount(parseInt(tonAmount).toFixed(2));
+	};
 
 	return (
 		<>
@@ -19,12 +29,12 @@ const Create = () => {
 						className=" h-[150px] w-[150px] self-center"
 					/>
 				</div>
-				<h1 className="font-extrabold text-2xl">Create a Steam</h1>
+				<h1 className="font-extrabold text-2xl">Create a Stream</h1>
 				<p className="text-black/40 font-semibold">Stream Payrolls to Your DAO Members for Their Contributions</p>
 				<div className="flex flex-col rounded-[44px] bg-white p-[32px] items-start h-[350px]">
 					<div className="flex flex-col items-start gap-[10px]">
-						<Input label="Monthly Compound" small placeholder="5.00 TON" value={tonAmount} onChange={(e) => setTonAmount(e.target.value)} name="tonAmount" className="font-2xl" />
-						<Input label="Enter the Address" placeholder="alice.ton" value={address} onChange={(e) => setAddress(e.target.value)} name="tonAmount" />
+						<Input label="Monthly Streaming" small placeholder="5.00 TON" value={tonAmount} onChange={(e) => setAmount(e.target.value)} name="tonAmount" className="font-2xl" />
+						<Input label="Enter the Address" placeholder="alice.ton" value={address} onChange={(e) => setAddress(e.target.value)} name="tonAmount" onFocus={parseNumber} />
 						<span className="mt-1">Streaming Schedule</span>
 						<div className="flex-col items-start gap-[8px] w-[400px] h-[108px]">
 							<div className="flex gap-[25px]">
