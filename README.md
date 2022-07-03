@@ -6,4 +6,4 @@
 * in this there is a payment channel and a state channel is initialized between the two parties
 
 Video Link:- 
-Live Website :-
+Live Website :- https://clever-kataifi-fce06c.netlify.app/
