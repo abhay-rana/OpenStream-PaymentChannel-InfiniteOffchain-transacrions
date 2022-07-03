@@ -8,7 +8,6 @@ import Button from "./Button";
 const Header = () => {
 	const { state, dispatch } = useContext(store);
 	console.log(state);
-	useEffect(() => {}, []);
 
 	return (
 		<>
